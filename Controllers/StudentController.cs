@@ -20,15 +20,11 @@ namespace WebAPI.Controllers
             },
             new StudentModel()
             {
-
                     Name = "Hari",
                     RollNo = "20",
                     Class = "12th"
             }
-
-
         };
-
 
         [HttpGet]
         public IActionResult Get()
@@ -43,12 +39,6 @@ namespace WebAPI.Controllers
             return Ok(student);
         }
 
-        //[HttpGet("{name}", Name = "GetName")]
-        //public IActionResult GetName(string name)
-        //{
-        //    var student = Students.FirstOrDefault(e => e.Name == name);
-        //    return Ok(student);
-        //} 
         [HttpPost()]
         public IActionResult Post()
         {
@@ -61,10 +51,7 @@ namespace WebAPI.Controllers
         {
             var student = Students.FirstOrDefault(e => e.RollNo == rollNo);
             student.Name = "Vishnu";
-
-
             return Ok(student);
         }
-
     }
 }
